@@ -9,7 +9,7 @@ import ProjectGallery from "./components/ProjectGallery";
 import { useEffect, useState } from "react";
 
 const coreProjects = [
-  { id: 1, video: "https://www.immigrant.studio/images/uploads/banners/renault-main-loop.webm", title: "title 1" },
+  { id: 1, video: "/video/video.mp4", title: "title 1" },
   { id: 2, video: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4", title: "title 2" },
 ];
 
