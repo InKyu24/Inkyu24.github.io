@@ -1,8 +1,9 @@
 import { motion, useAnimationControls } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import ProjectVideo from './ProjectVideo';
 
 const HeroSection = ({ project, indexedProject }) => {
-    const videoRef= useRef();
+    const videoRef = useRef();
 
     const controls = useAnimationControls();
     useEffect(() => {
@@ -22,11 +23,9 @@ const HeroSection = ({ project, indexedProject }) => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
         >
-            <video ref={videoRef} autoPlay muted className='w-full'>
-                <source src={project.video} type="video/mp4" />
-            </video>
+            <ProjectVideo videoRef={videoRef} src={project.video} />
             <motion.h1
-                className="absolute text-white text-6xl font-bold z-10 bg-black bg-opacity-50 p-4"
+                className="absolute text-white text-6xl font-bold z-10 p-4"
                 initial={{ y: -500 }} 
                 animate={controls}
                 transition={{ type: "spring", stiffness: 120 }}

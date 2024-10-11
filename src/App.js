@@ -9,17 +9,17 @@ import ProjectGallery from "./components/ProjectGallery";
 import { useEffect, useState } from "react";
 
 const coreProjects = [
-  { id: 1, video: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", title: "title 1" },
-  { id: 2, video: "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4", title: "title 2" },
+  { id: 1, video: "https://www.immigrant.studio/images/uploads/banners/renault-main-loop.webm", title: "title 1" },
+  { id: 2, video: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", title: "title 2" },
 ];
 
 const projects = [
-  { id: 1, image: "https://placehold.co/600x400", title: "title 1" },
-  { id: 2, image: "https://placehold.co/600x400", title: "title 2" },
-  { id: 3, image: "https://placehold.co/600x400", title: "title 3" },
-  { id: 4, image: "https://placehold.co/600x400", title: "title 4" },
-  { id: 5, image: "https://placehold.co/600x400", title: "title 5" },
-  { id: 6, image: "https://placehold.co/600x400", title: "title 6" },
+  { id: 1, video: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", title: "title 1" },
+  { id: 2, video: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", title: "title 2" },
+  { id: 3, video: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", title: "title 3" },
+  { id: 4, video: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", title: "title 4" },
+  { id: 5, video: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", title: "title 5" },
+  { id: 6, video: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", title: "title 6" },
 ];
 
 function App() {
