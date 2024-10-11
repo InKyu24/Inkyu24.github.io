@@ -23,7 +23,7 @@ const HeroSection = ({ project, indexedProject }) => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
         >
-            <ProjectVideo videoRef={videoRef} src={project.video} />
+            <ProjectVideo src={project.video} main={true} videoRef={videoRef} />
             <motion.h1
                 className="absolute text-white text-6xl font-bold z-10 p-4"
                 initial={{ y: -500 }} 
