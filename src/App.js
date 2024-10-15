@@ -34,9 +34,6 @@ function App() {
     return () => clearTimeout(timer); // 컴포넌트 해제 시 타이머 정리
   }, []);
 
-
-
-
   const handleActiveIndexChange = (slide) => {
     setIndexedProject(coreProjects[slide.realIndex]);
   }
