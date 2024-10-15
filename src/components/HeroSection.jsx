@@ -7,14 +7,14 @@ const HeroSection = ({ project, indexedProject }) => {
 
     const controls = useAnimationControls();
     useEffect(() => {
-        if (indexedProject.id == project.id) {
+        if (indexedProject.id === project.id) {
             controls.start({ y: 0 });
             videoRef.current.play();
         } else {
             videoRef.current.pause();
             controls.start({ y: -500 });
         }
-    }, [indexedProject]);
+    }, [controls, project, indexedProject]);
     
     return (
         <motion.div 

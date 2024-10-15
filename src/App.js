@@ -8,20 +8,6 @@ import Footer from "./components/Footer";
 import ProjectGallery from "./components/ProjectGallery";
 import { useEffect, useState } from "react";
 
-const coreProjects = [
-  { id: 1, video: "/video/video.mp4", title: "title 1" },
-  { id: 2, video: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4", title: "title 2" },
-];
-
-const projects = [
-  { id: 1, video: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4", title: "title 1", subTitle: "subTitle 1" },
-  { id: 2, video: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4", title: "title 2", subTitle: "subTitle 2" },
-  { id: 3, video: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4", title: "title 3", subTitle: "subTitle 3" },
-  { id: 4, video: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4", title: "title 4", subTitle: "subTitle 4" },
-  { id: 5, video: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4", title: "title 5", subTitle: "subTitle 5" },
-  { id: 6, video: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4", title: "title 6", subTitle: "subTitle 6" },
-];
-
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [indexedProject, setIndexedProject] = useState();

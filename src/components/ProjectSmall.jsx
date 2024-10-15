@@ -7,7 +7,7 @@ const ProjectSmall = ({ project }) => {
 
     useEffect(() => {
         const observerOptions = {
-            threshold: 0.4, // 이미지가 50% 이상 보이면 동작
+            threshold: 0.4, // 이미지가 40% 이상 보이면 동작
         };
 
         const observerCallback = (entries) => {
@@ -24,12 +24,13 @@ const ProjectSmall = ({ project }) => {
 
         const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-        videoRef.current.forEach((v) => {
+        const currentVideoRefs = videoRef.current;
+        currentVideoRefs.forEach((v) => {
             if (v) observer.observe(v);
         });
 
         return () => {
-            videoRef.current.forEach((v) => {
+            currentVideoRefs.forEach((v) => {
                 if (v) observer.unobserve(v);
             });
         };
@@ -37,20 +38,20 @@ const ProjectSmall = ({ project }) => {
 
     const titleControls = useAnimationControls();
     const subTitleControls = useAnimationControls();
-    const [isHovered, setIsHovered] = useState(false);
     
     const handleMouseEnter = () => {
-        setIsHovered(true);
-        if (videoRef.current[project.id]) {
-            videoRef.current[project.id].play();  // 특정 videoRef의 play 호출
+        const currentVideo = videoRef.current[project.id];
+        if (currentVideo) {
+            currentVideo.play();  // 특정 videoRef의 play 호출
         }
         titleControls.start({ y: -50 });
         subTitleControls.start({ y: 0, opacity: 1 })
     };
 
     const handleMouseLeave = () => {
-        if (videoRef.current[project.id]) {
-            videoRef.current[project.id].pause();  // 특정 videoRef의 pause 호출
+        const currentVideo = videoRef.current[project.id];
+        if (currentVideo) {
+            currentVideo.pause();  // 특정 videoRef의 pause 호출
         }
         titleControls.start({ y: 0 });
         subTitleControls.start({ y: 100, opacity: 0 })

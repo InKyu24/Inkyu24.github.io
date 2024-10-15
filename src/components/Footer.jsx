@@ -14,7 +14,7 @@ const Footer = ({ introduce, contributions }) => {
                 <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 list-none">
                     {
                         contributions.map((con) => 
-                            <li className={`py-5 lg:mr-10 ${con.id % 2 == 1 && "md:mr-5"}`}>
+                            <li className={`py-5 lg:mr-10 ${con.id % 2 === 1 && "md:mr-5"}`}>
                                 <div>
                                     <span className="text-2xl">
                                         {con.title}
