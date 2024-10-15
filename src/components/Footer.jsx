@@ -1,46 +1,31 @@
-const Footer = () => {
+const Footer = ({ introduce, contributions }) => {
+    console.log(contributions);
   return (
     <footer className="min-h-screen flex flex-col bg-gray-800 text-white p-8 justify-between" id="contact">
         <div className="mx-8 grid grid-cols-1 lg:grid-cols-2">
             <div className="mb-8 mr-16">
                 <h2 className="text-3xl font-bold mb-4">About Me</h2>
                 <p className="text-lg leading-relaxed max-w-2xl">
-                    I am a passionate video director with over 10 years of experience in creating compelling visual narratives. My work spans from short films and commercials to documentaries, always pushing boundaries to tell stories in new and exciting ways. Let’s create something amazing together!
+                    { introduce }
                 </p>
             </div>
             <div className="mb-8">
                 <h2 className="text-3xl font-bold mb-4">Projects & Contributions</h2>
                 <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 list-none">
-                    <li className="py-5 md:mr-5 lg:mr-10">
-                        <div>
-                            <span className="text-2xl">
-                                Project 1
-                            </span>
-                            <p className="mt-3">
-                                Led the direction and visual concept, resulting in a 20% increase in audience engagement.
-                            </p>
-                        </div>
-                    </li>
-                    <li className="py-5 lg:mr-10">
-                    <div>
-                            <span className="text-2xl">
-                                Project 2
-                            </span>
-                            <p className="mt-3">
-                                Managed post-production, ensuring seamless transitions and high-quality sound design.
-                            </p>
-                        </div>
-                    </li>
-                    <li className="py-5 md:mr-5 lg:mr-10">
-                    <div>
-                            <span className="text-2xl">
-                                Project 3
-                            </span>
-                            <p className="mt-3">
-                                Directed a team of cinematographers, creating stunning visuals that enhanced the narrative.
-                            </p>
-                        </div>
-                    </li>
+                    {
+                        contributions.map((con) => 
+                            <li className={`py-5 lg:mr-10 ${con.id % 2 == 1 && "md:mr-5"}`}>
+                                <div>
+                                    <span className="text-2xl">
+                                        {con.title}
+                                    </span>
+                                    <p className="mt-3">
+                                        {con.description}
+                                    </p>
+                                </div>
+                            </li>
+                        )
+                    }
                 </ul>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import { motion, useAnimationControls } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import ProjectVideo from './ProjectVideo';
 
 const HeroSection = ({ project, indexedProject }) => {
