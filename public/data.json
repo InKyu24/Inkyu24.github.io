@@ -16,7 +16,8 @@
   "contributions" : [
     { "id" : 1, "title" : "Project 1", "description": "Led the direction and visual concept, resulting in a 20% increase in audience engagement."},
     { "id" : 2, "title" : "Project 2", "description": "Managed post-production, ensuring seamless transitions and high-quality sound design."},
-    { "id" : 3, "title" : "Project 3", "description": "Directed a team of cinematographers, creating stunning visuals that enhanced the narrative."}
+    { "id" : 3, "title" : "Project 3", "description": "Directed a team of cinematographers, creating stunning visuals that enhanced the narrative."},
+    { "id" : 4, "title" : "Project 3", "description": "Directed a team of cinematographers, creating stunning visuals that enhanced the narrative."}
   ]
 }
 
