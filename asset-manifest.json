@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.997b791f.css",
-    "main.js": "/static/js/main.cb4ce363.js",
-    "static/js/453.db3808d0.chunk.js": "/static/js/453.db3808d0.chunk.js",
-    "index.html": "/index.html",
-    "main.997b791f.css.map": "/static/css/main.997b791f.css.map",
-    "main.cb4ce363.js.map": "/static/js/main.cb4ce363.js.map",
-    "453.db3808d0.chunk.js.map": "/static/js/453.db3808d0.chunk.js.map"
+    "main.css": "/Inkyu24.github.io/static/css/main.997b791f.css",
+    "main.js": "/Inkyu24.github.io/static/js/main.6da11d9c.js",
+    "static/js/453.db3808d0.chunk.js": "/Inkyu24.github.io/static/js/453.db3808d0.chunk.js",
+    "index.html": "/Inkyu24.github.io/index.html",
+    "main.997b791f.css.map": "/Inkyu24.github.io/static/css/main.997b791f.css.map",
+    "main.6da11d9c.js.map": "/Inkyu24.github.io/static/js/main.6da11d9c.js.map",
+    "453.db3808d0.chunk.js.map": "/Inkyu24.github.io/static/js/453.db3808d0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.997b791f.css",
-    "static/js/main.cb4ce363.js"
+    "static/js/main.6da11d9c.js"
   ]
 }
