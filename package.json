@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "deploy" : "gh-pages -d build"
   },
-  "homepage": "https://inkyu24.github.io",
+  "homepage": "https://inkyuinst.store/",
   "eslintConfig": {
     "extends": [
       "react-app",
