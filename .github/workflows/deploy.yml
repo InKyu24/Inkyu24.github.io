@@ -45,11 +45,11 @@ jobs:
       - name: Build
         run: |
           CI=false yarn build
-          cp ./build/index.html ./build/404.html
+          cp ./dist/index.html ./dist/404.html
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./dist
           cname: inkyuinst.store
