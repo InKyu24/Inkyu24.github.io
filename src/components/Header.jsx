@@ -16,6 +16,10 @@ const Header = () => {
             className="fixed top-0 w-full p-4 flex justify-between z-50"
         >
             <button onClick={() => scrollToTop()} className="text-xl">Logo</button>
+            <div>
+                <a href="#projects" className="mr-4">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
         </motion.nav>
     );
 }

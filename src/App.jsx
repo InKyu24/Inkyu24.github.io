@@ -8,34 +8,29 @@ import Footer from "./components/Footer";
 import ProjectGallery from "./components/ProjectGallery";
 import { useEffect, useState } from "react";
 
-const coreProjects = [
-  { id: 1, video: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", title: "title 1" },
-  { id: 2, video: "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4", title: "title 2" },
-];
-
-const projects = [
-  { id: 1, image: "https://placehold.co/600x400", title: "title 1" },
-  { id: 2, image: "https://placehold.co/600x400", title: "title 2" },
-  { id: 3, image: "https://placehold.co/600x400", title: "title 3" },
-  { id: 4, image: "https://placehold.co/600x400", title: "title 4" },
-  { id: 5, image: "https://placehold.co/600x400", title: "title 5" },
-  { id: 6, image: "https://placehold.co/600x400", title: "title 6" },
-];
-
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [indexedProject, setIndexedProject] = useState(coreProjects[0]);
+  const [indexedProject, setIndexedProject] = useState();
+  const [coreProjects, setCoreProjects] = useState([]);
+  const [projects, setProjects] = useState([]);
+  const [introduce, setIntroduce] = useState("");
+  const [contributions, setContributions] = useState([]);
 
   useEffect(() => {
     // 화면이 준비되면 로딩 해제
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000); // 예시로 2초 후 로딩 해제
-    return () => clearTimeout(timer); // 컴포넌트 해제 시 타이머 정리
+    const fetchProjects = async () => {
+      const response = await fetch('/data.json');
+      const data = await response.json();
+      setCoreProjects(data.coreProjects);
+      setProjects(data.projects);
+      setIndexedProject(data.coreProjects[0]); // 첫 번째 프로젝트로 초기화
+      setIsLoading(false); // 데이터 로딩이 완료되면 로딩 해제
+      setIntroduce(data.introduce);
+      setContributions(data.contributions);
+    };
+    
+    fetchProjects();
   }, []);
-
-
-
 
   const handleActiveIndexChange = (slide) => {
     setIndexedProject(coreProjects[slide.realIndex]);
@@ -64,7 +59,7 @@ function App() {
           </section>
         </main>
       </div>
-      <Footer />
+      <Footer introduce={introduce} contributions={contributions} />
     </div>
   );
 }
